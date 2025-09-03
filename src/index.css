@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #111);
+  background-size: cover;
+}
+
+.clock-continer {
+  margin: 2rem auto;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  width: auto;
+  color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.clock {
+  color: white;
+  font-size: clamp(2rem, 8vw, 6rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .clock {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clock-continer {
+    padding: 1.5rem 2rem;
+  }
+  .clock {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock-continer {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+  }
+  .clock {
+    font-size: 2.5rem;
+  }
+}
